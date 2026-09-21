@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SwedWay — Більше, ніж просто поїздка</title>
+<meta name="description" content="Регулярні пасажирські перевезення Україна ↔ Швеція. Mercedes-Benz Sprinter. Від адреси до адреси.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#020b12;--bg2:#061724;--card:#071c2b;--line:rgba(82,170,235,.2);--blue:#1292ff;--blue2:#0669df;--yellow:#ffd429;--white:#f5f8fb;--muted:#8ca4b5;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;overflow-x:hidden;background-image:linear-gradient(rgba(2,11,18,.74),rgba(2,11,18,.82)),url('site-bg.png');background-size:cover;background-position:center top;background-attachment:fixed;background-repeat:no-repeat}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 75% 12%,rgba(0,120,255,.10),transparent 28%),linear-gradient(180deg,rgba(2,11,18,.08),rgba(2,11,18,.18));pointer-events:none}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.17em;text-transform:uppercase;color:#49b4ff}.eyebrow i{display:inline-block;width:28px;height:2px;background:var(--yellow);margin:0 9px 3px 0}.section{padding:100px 0}.section-title{font-size:clamp(38px,5vw,66px);line-height:.94;letter-spacing:-.055em;margin:14px 0 18px}.muted{color:var(--muted);line-height:1.65}
+header{height:76px;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(2,11,18,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}.nav{height:100%;display:flex;align-items:center;gap:28px}.brand{font-weight:900;font-size:22px;display:flex;align-items:center;gap:9px;letter-spacing:-.05em}.mark{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,#ffd32d,#0b86ef);color:#02111b;box-shadow:0 0 28px rgba(16,143,255,.25);transform:skew(-7deg)}
+.logo-mark{overflow:hidden}.logo-mark img{width:100%;height:100%;display:block;object-fit:cover}
+nav{flex:1;display:flex;justify-content:center;gap:27px;color:#91a7b7;font-size:12px}nav a{transition:.2s}nav a:hover{color:#fff}.navicons{display:flex;gap:7px}.circle{width:37px;height:37px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:#c9d9e4;font-size:13px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:10px;padding:13px 19px;background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;font-weight:800;font-size:12px;box-shadow:0 12px 34px rgba(0,126,255,.2);transition:.25s}.btn:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(0,126,255,.34)}.btn.ghost{background:rgba(6,25,39,.72);border-color:rgba(84,169,230,.34);box-shadow:none}.btn.yellow{background:linear-gradient(135deg,#ffd735,#eab718);color:#07101a;box-shadow:0 12px 30px rgba(255,211,42,.14)}
+.hero{padding-top:76px;position:relative;background:linear-gradient(180deg,rgba(2,11,18,.18),rgba(2,11,18,.38));border-bottom:1px solid rgba(78,171,238,.08)}.hero-grid{min-height:660px;display:grid;grid-template-columns:.85fr 1.15fr;gap:25px;align-items:center}.hero-copy{padding:55px 0}.hero h1{font-size:clamp(48px,5.2vw,78px);line-height:.9;letter-spacing:-.055em;margin:18px 0 22px;max-width:560px}.hero h1 span{color:var(--yellow)}.hero p{max-width:560px;color:#cfdee7;font-size:16px;line-height:1.55}.hero-meta{display:flex;gap:27px;margin:28px 0 32px}.meta{display:flex;gap:9px;align-items:center}.metaicon{width:34px;height:34px;border:1px solid rgba(67,170,255,.35);border-radius:9px;display:grid;place-items:center;color:#55baff}.meta b{display:block;font-size:13px}.meta small{display:block;color:#8199aa;margin-top:2px;font-size:11px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.hero-media{height:600px;display:flex;align-items:center;justify-content:center;position:relative;padding:18px}.hero-media:before{content:"";position:absolute;inset:8% 3%;background:radial-gradient(circle,rgba(0,135,255,.24),transparent 68%);filter:blur(16px)}.hero-media img{position:relative;width:100%;max-height:590px;object-fit:cover;border:1px solid rgba(67,170,255,.42);border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 55px rgba(0,120,255,.13);display:block}.hero-note{position:absolute;right:5%;top:12%;font-size:17px;color:#a9bac7;font-style:italic;transform:rotate(-7deg);opacity:.8}
+.trust{margin-top:-10px;position:relative}.trustgrid{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:16px;background:rgba(4,19,30,.94);overflow:hidden}.trustitem{padding:22px 14px;text-align:center;border-right:1px solid var(--line)}.trustitem:last-child{border:0}.ti{font-size:23px;color:var(--yellow);margin-bottom:9px}.trustitem strong{display:block;font-size:11px}.trustitem span{display:block;color:#7891a3;font-size:10px;margin-top:4px}
+.fleet{background:linear-gradient(180deg,#030f18,#061825)}.fleet-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}.fleet-head-copy{max-width:700px}.fleet-intro{max-width:390px;color:#8ea5b6;line-height:1.65;font-size:13px}.fleet-switch{display:flex;gap:7px;margin-top:24px}.fleet-switch button{border:1px solid var(--line);background:#071a28;color:#8ea5b6;border-radius:9px;padding:10px 14px;cursor:pointer}.fleet-switch button.active{background:var(--blue);color:#fff;border-color:transparent;box-shadow:0 8px 25px rgba(0,130,255,.22)}.fleet-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}.fleet-card{border:1px solid rgba(53,160,236,.28);border-radius:20px;overflow:hidden;background:linear-gradient(180deg,rgba(7,29,45,.9),rgba(3,18,29,.95));box-shadow:0 25px 70px rgba(0,0,0,.2);transition:.35s}.fleet-card:hover{transform:translateY(-6px);border-color:rgba(53,160,236,.62);box-shadow:0 30px 80px rgba(0,70,140,.22)}.fleet-photo{aspect-ratio:16/9;background:#061521;overflow:hidden}.fleet-photo img{display:block;width:100%;height:100%;object-fit:cover}.fleet-card-body{padding:22px}.fleet-model{display:flex;align-items:end;justify-content:space-between;gap:15px}.fleet-model h3{margin:0;font-size:32px;letter-spacing:-.04em}.fleet-model h3 span{color:#1593ff}.fleet-badge{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#59baff;border:1px solid rgba(45,160,240,.4);padding:8px 10px;border-radius:999px}.fleet-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.fleet-spec{padding:13px 10px;border:1px solid rgba(75,157,207,.15);border-radius:11px;background:rgba(255,255,255,.02)}.fleet-spec b{display:block;font-size:11px}.fleet-spec small{display:block;color:#71899a;font-size:9px;margin-top:4px;line-height:1.35}.fleet-card .btnrow{display:flex;gap:9px;margin-top:17px}.fleet-card .btnrow .btn{flex:1;justify-content:center}.switch{display:none}.specs{display:none}
+.schedule{background:#03111a}.road{margin-top:36px;border-radius:20px;overflow:hidden;border:1px solid var(--line);height:310px;position:relative}.road img{width:100%;height:100%;object-fit:cover}.road:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,13,21,.68),transparent 40%,transparent 60%,rgba(2,13,21,.68))}.schedulecards{position:absolute;z-index:2;inset:0;display:flex;align-items:center;justify-content:space-between;padding:35px}.scard{width:310px;padding:23px;border-radius:15px;background:rgba(3,20,32,.86);border:1px solid rgba(78,171,238,.35);backdrop-filter:blur(13px)}.scard .country{font-size:11px;color:#c9d8e2}.scard h3{font-size:24px;margin:9px 0;color:var(--yellow)}.scard p{font-size:11px;color:#8ca4b5;margin:0}.routegrid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:stretch}.photo-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#061521}.photo-card img{width:100%;height:100%;min-height:540px;object-fit:cover;display:block}.cities{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:28px}.city{font-size:11px;padding:9px 11px;border-bottom:1px solid rgba(255,255,255,.06);color:#c8d6df}.city b{color:#54b8ff;margin-right:7px}
+.parcel{background:#04131e}.parcelgrid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.parcelphoto{border-radius:20px;overflow:hidden;border:1px solid var(--line);height:360px}.parcelphoto img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}.points{display:flex;gap:20px;flex-wrap:wrap;margin:23px 0}.points span{font-size:12px;color:#c8d7e0}.note{padding:15px;border:1px solid rgba(255,211,42,.38);border-radius:11px;color:#f4d63f;background:rgba(255,211,42,.035);font-size:11px}
+.steps{background:#061621}.stepsgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:38px}.step{padding:25px 17px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#092338,#04141f);transition:.3s}.step:hover{transform:translateY(-7px);border-color:rgba(78,174,239,.5)}.num{color:#35a7ff;font-weight:900;font-size:12px}.step h3{font-size:15px;margin:15px 0 7px}.step p{font-size:11px;color:#7f97a9;line-height:1.5}
+.booking{background:#03101a}.bookinggrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;align-items:center}.bookingphoto{height:460px;border-radius:20px;overflow:hidden;border:1px solid var(--line);position:relative}.bookingphoto img{width:100%;height:100%;object-fit:cover;object-position:center}.bookingphoto:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,12,19,.8),rgba(2,12,19,.05))}.bookingcopy{position:absolute;z-index:2;left:28px;top:30px;max-width:290px}.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:28px;border:1px solid var(--line);border-radius:18px;background:#061a28}.full{grid-column:1/-1}label{font-size:10px;color:#8ba3b5}input,select,textarea{width:100%;margin-top:6px;padding:13px;border-radius:8px;border:1px solid rgba(82,165,220,.18);background:#081f30;color:#edf5f9;font:inherit;outline:none}textarea{min-height:85px;resize:vertical}.form button{width:100%}
+.reviews{background:#04131e}.reviewgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}.review{padding:22px;border:1px solid var(--line);border-radius:14px;background:#071c2a}.stars{color:var(--yellow);font-size:12px;letter-spacing:2px;margin:7px 0}.review p{font-size:11px;line-height:1.6;color:#9db1bf}
+footer{border-top:1px solid var(--line);padding:28px 0;background:#020a11}.footer{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer small{display:block;color:#6c8495;font-size:10px;margin-top:4px}.footerbuttons{display:flex;gap:8px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(28px);transition:.75s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:950px){nav,.navicons{display:none}.fleet-head{display:block}.fleet-intro{margin-top:20px}.fleet-cards,.routegrid,.parcelgrid,.bookinggrid{grid-template-columns:1fr}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:65px 0 10px}.hero-media{height:430px}.trustgrid{grid-template-columns:repeat(2,1fr)}.trustitem:nth-child(2n){border-right:0}.stepsgrid{grid-template-columns:1fr 1fr}.schedulecards{padding:20px}.scard{width:260px}}
+@media(max-width:620px){.wrap{width:calc(100% - 28px)}.section{padding:75px 0}.hero h1{font-size:40px;line-height:.94;letter-spacing:-.045em;margin:14px 0 18px;max-width:100%}.hero-media{height:310px}.hero-note{display:none}.hero-meta{flex-direction:column;gap:13px}.trustgrid{grid-template-columns:1fr 1fr}.trustitem{padding:16px 8px}.road{height:480px}.road img{object-position:center}.schedulecards{flex-direction:column;justify-content:center;gap:10px}.scard{width:min(100%,330px)}.photo-card img{min-height:350px}.cities{grid-template-columns:1fr 1fr}.stepsgrid,.reviewgrid,.form{grid-template-columns:1fr}.full{grid-column:auto}.footer{flex-direction:column;align-items:flex-start}.footerbuttons{width:100%}.footerbuttons .btn{flex:1}}
+
+/* --- SwedWay icon system / booking polish --- */
+.icon{width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;color:currentColor}
+.icon svg{width:100%;height:100%;display:block;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.circle .icon{width:15px;height:15px}
+.mark{font-size:0;transform:none;position:relative;overflow:hidden}
+.mark .icon{width:18px;height:18px;color:#07131d}
+.metaicon{font-size:0}.metaicon .icon{width:17px;height:17px}
+.ti{font-size:0}.ti .icon{width:23px;height:23px;color:#ffd52b}
+.points{display:flex;gap:18px;flex-wrap:wrap}.points span{display:inline-flex;align-items:center;gap:7px}.points .icon{width:14px;height:14px;color:#ffd52b}
+.footerbuttons .btn .icon{width:15px;height:15px}
+.hero-actions .btn .icon{width:14px;height:14px}.btn .icon{width:14px;height:14px}.scard h3 .icon{display:inline-flex;width:15px;height:15px;vertical-align:-2px;margin-left:5px}
+.bookingphoto{position:relative;overflow:hidden}
+.bookingphoto:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,11,18,.82) 0%,rgba(2,11,18,.58) 34%,rgba(2,11,18,.10) 72%,rgba(2,11,18,.02) 100%),linear-gradient(0deg,rgba(2,11,18,.62) 0%,transparent 52%);pointer-events:none}
+.bookingphoto img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.bookingcopy{position:absolute;z-index:2;left:30px;right:24px;bottom:28px;padding:18px 18px 16px 0}
+.bookingcopy .section-title{font-size:clamp(38px,3.7vw,56px);line-height:.88;letter-spacing:-.06em;margin:12px 0 12px;max-width:360px}
+.bookingcopy .muted{max-width:330px;font-size:14px;line-height:1.45;color:#d0dde6;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.bookingcopy .eyebrow{font-size:11px}
+.step{position:relative;overflow:hidden}.step:after{content:"";position:absolute;right:-35px;bottom:-35px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(19,145,255,.12),transparent 68%);pointer-events:none}
+@media(max-width:620px){.bookingcopy{left:22px;right:18px;bottom:22px}.bookingcopy .section-title{font-size:43px}.bookingcopy .muted{font-size:13px}.points{gap:11px}}
+
+/* Booking typography polish */
+.booking-visual,
+.booking-photo,
+.booking-media { position: relative; overflow: hidden; }
+
+.booking-visual::after,
+.booking-photo::after,
+.booking-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(2,13,22,.90) 0%, rgba(2,13,22,.68) 42%, rgba(2,13,22,.18) 78%, rgba(2,13,22,.05) 100%),
+    linear-gradient(0deg, rgba(2,13,22,.48), transparent 52%);
+  pointer-events: none;
+}
+
+.booking-visual > *,
+.booking-photo > *,
+.booking-media > * { position: relative; z-index: 2; }
+
+.booking-copy,
+.booking-overlay,
+.booking-visual .booking-copy {
+  max-width: 82% !important;
+  width: 82% !important;
+  box-sizing: border-box;
+}
+
+.booking-copy h2,
+.booking-overlay h2,
+.booking-visual h2 {
+  max-width: 100% !important;
+  width: 100% !important;
+  font-size: clamp(34px, 4.2vw, 62px) !important;
+  line-height: .94 !important;
+  letter-spacing: -.035em !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+  margin: 10px 0 18px !important;
+}
+
+.booking-copy p,
+.booking-overlay p,
+.booking-visual p {
+  max-width: 88% !important;
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .booking-copy,
+  .booking-overlay,
+  .booking-visual .booking-copy {
+    max-width: 90% !important;
+    width: 90% !important;
+  }
+  .booking-copy h2,
+  .booking-overlay h2,
+  .booking-visual h2 {
+    font-size: clamp(30px, 8vw, 48px) !important;
+  }
+}
+
+
+/* FINAL BOOKING COPY FIX - keep every character inside the image */
+.bookingphoto .bookingcopy{
+  left: 28px !important;
+  right: 28px !important;
+  top: auto !important;
+  bottom: 28px !important;
+  max-width: none !important;
+  width: auto !important;
+  box-sizing: border-box !important;
+}
+.bookingphoto .bookingcopy .section-title{
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  font-size: 39px !important;
+  line-height: .96 !important;
+  letter-spacing: -.045em !important;
+  white-space: normal !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  margin: 10px 0 14px !important;
+}
+.bookingphoto .bookingcopy .muted{
+  width: 100% !important;
+  max-width: 330px !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+@media (max-width: 620px){
+  .bookingphoto .bookingcopy{
+    left: 22px !important;
+    right: 22px !important;
+    bottom: 22px !important;
+  }
+  .bookingphoto .bookingcopy .section-title{
+    font-size: 34px !important;
+  }
+}
+
+
+/* Trust strip - premium icon system */
+.trustgrid{
+  align-items:stretch;
+}
+.trustitem{
+  position:relative;
+  min-height:128px;
+  padding:20px 14px 18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  transition:background .3s ease, transform .3s ease;
+}
+.trustitem::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 50% 22%,rgba(255,213,43,.055),transparent 45%);
+  pointer-events:none;
+}
+.trustitem:hover{
+  background:rgba(9,34,49,.72);
+}
+.trustitem .ti{
+  width:46px;
+  height:46px;
+  margin:0 0 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,213,43,.34);
+  border-radius:13px;
+  background:linear-gradient(145deg,rgba(255,213,43,.11),rgba(13,42,58,.72));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 8px 24px rgba(0,0,0,.16);
+  position:relative;
+  z-index:1;
+}
+.trustitem .ti::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:13px;
+  border:1px solid rgba(21,147,255,.12);
+  pointer-events:none;
+}
+.trustitem .ti .icon{
+  width:21px;
+  height:21px;
+  color:#ffd52b;
+}
+.trustitem .ti .icon svg{
+  stroke-width:1.75;
+}
+.trustitem strong,
+.trustitem > span:not(.ti){
+  position:relative;
+  z-index:1;
+}
+.trustitem strong{
+  font-size:12px;
+  line-height:1.25;
+  letter-spacing:.01em;
+}
+.trustitem > span:not(.ti){
+  font-size:10px;
+  line-height:1.35;
+  margin-top:5px;
+  color:#7891a3;
+  max-width:145px;
+}
+
+/* Make the strip breathe on tablets and phones */
+@media(max-width:950px){
+  .trust{
+    margin-top:0;
+  }
+  .trustgrid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .trustitem{
+    min-height:120px;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .trustitem:nth-child(2n){
+    border-right:0;
+  }
+  .trustitem:nth-child(5){
+    grid-column:1 / -1;
+    border-right:0;
+    border-bottom:0;
+  }
+}
+@media(max-width:620px){
+  .trustgrid{
+    border-radius:14px;
+  }
+  .trustitem{
+    min-height:112px;
+    padding:15px 9px 14px;
+  }
+  .trustitem .ti{
+    width:42px;
+    height:42px;
+    margin-bottom:9px;
+    border-radius:11px;
+  }
+  .trustitem .ti .icon{
+    width:19px;
+    height:19px;
+  }
+  .trustitem strong{
+    font-size:11px;
+  }
+  .trustitem > span:not(.ti){
+    font-size:9px;
+    margin-top:4px;
+  }
+}
+
+
+/* Header phone + messengers */
+.navicons{display:flex;align-items:center;gap:8px}
+.contact-menu{position:relative}
+.contact-circle{text-decoration:none;cursor:pointer}
+.contact-dropdown{
+  position:absolute;top:calc(100% + 12px);right:0;width:255px;
+  padding:16px;border:1px solid rgba(21,147,255,.28);border-radius:14px;
+  background:rgba(4,19,30,.98);box-shadow:0 18px 50px rgba(0,0,0,.42);
+  opacity:0;visibility:hidden;transform:translateY(-6px);transition:.2s ease;z-index:50;
+}
+.contact-menu:hover .contact-dropdown,.contact-menu:focus-within .contact-dropdown{
+  opacity:1;visibility:visible;transform:none;
+}
+.contact-number{color:#fff;font-size:16px;font-weight:700;letter-spacing:.01em}
+.contact-label{margin-top:4px;color:#7891a3;font-size:11px}
+.contact-links{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:13px}
+.contact-links a{
+  display:flex;align-items:center;justify-content:center;min-height:34px;
+  border:1px solid var(--line);border-radius:8px;color:#dce8ef;font-size:10px;
+  text-decoration:none;transition:.2s ease;
+}
+.contact-links a:hover{border-color:#1593ff;color:#fff;background:rgba(21,147,255,.10)}
+@media(max-width:620px){
+  .contact-dropdown{position:fixed;top:74px;right:14px;width:min(255px,calc(100vw - 28px))}
+}
+
+
+/* ================= MOBILE-FIRST REFINEMENT ================= */
+.mobile-menu-btn{display:none}
+.mobile-menu{display:none}
+@media (max-width: 950px){
+  header{height:68px}
+  .nav{gap:12px}
+  .brand{font-size:20px;gap:8px}
+  .brand .mark{width:30px;height:30px}
+  .mobile-menu-btn{display:flex;margin-left:auto;width:42px;height:42px;border:1px solid var(--line);border-radius:11px;background:rgba(5,23,35,.82);align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#fff;cursor:pointer}
+  .mobile-menu-btn span{display:block;width:17px;height:2px;border-radius:2px;background:#dceaf3;transition:.22s}
+  .mobile-menu-btn.active span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .mobile-menu-btn.active span:nth-child(2){opacity:0}
+  .mobile-menu-btn.active span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  header .nav > .btn{padding:11px 13px;font-size:11px}
+  .mobile-menu{position:fixed;display:block;top:68px;left:0;right:0;z-index:95;background:rgba(2,11,18,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(82,170,235,.2);transform:translateY(-120%);opacity:0;visibility:hidden;transition:.25s ease;max-height:calc(100dvh - 68px);overflow:auto}
+  .mobile-menu.open{transform:none;opacity:1;visibility:visible}
+  .mobile-menu-inner{padding:18px 14px 24px;display:flex;flex-direction:column;gap:5px}
+  .mobile-menu-inner>a{padding:14px 13px;border-radius:10px;color:#dbe8ef;font-size:14px;font-weight:700;border:1px solid transparent}
+  .mobile-menu-inner>a:active{background:#092338}
+  .mobile-menu-inner .mobile-book{margin-top:8px;background:linear-gradient(135deg,var(--blue),var(--blue2));text-align:center;color:#fff}
+  .mobile-book span{margin-left:5px}
+  .mobile-contact{margin-top:10px;padding:15px;border:1px solid var(--line);border-radius:12px;background:#061a28}
+  .mobile-contact>b{font-size:14px}
+  .mobile-contact>div{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+  .mobile-contact a{padding:9px 4px;text-align:center;border:1px solid var(--line);border-radius:8px;color:#a9c0cf;font-size:10px}
+  nav{display:none}
+  .navicons{display:flex;margin-left:0}
+  .contact-menu{display:none}
+  .hero{padding-top:68px}
+  .hero-grid{min-height:auto;grid-template-columns:1fr;gap:8px}
+  .hero-copy{padding:48px 0 8px}
+  .hero h1{font-size:clamp(42px,10vw,64px);max-width:520px;line-height:.92}
+  .hero p{font-size:14px;max-width:560px}
+  .hero-meta{margin:22px 0 25px;gap:12px;flex-direction:row;flex-wrap:wrap}
+  .meta{min-width:180px}
+  .hero-media{height:auto;padding:10px 0 32px}
+  .hero-media img{max-height:none;aspect-ratio:16/10;object-fit:cover;border-radius:17px}
+  .trust{margin-top:0}
+  .section{padding:82px 0}
+  .section-title{font-size:clamp(38px,8vw,58px)}
+  .fleet-head{margin-bottom:28px}
+  .fleet-head-copy .section-title{max-width:520px}
+  .fleet-intro{max-width:560px;font-size:12px}
+  .fleet-cards{grid-template-columns:1fr}
+  .fleet-card:hover{transform:none}
+  .fleet-photo{aspect-ratio:16/9}
+  .fleet-model h3{font-size:28px}
+  .schedule .section-title{margin-bottom:24px}
+  .road{height:auto;overflow:hidden;background:#061521;display:flex;flex-direction:column}
+  .road>img{height:210px;flex:none;object-fit:cover}
+  .road:after{display:none}
+  .schedulecards{position:relative;inset:auto;display:grid;grid-template-columns:1fr 1fr;padding:12px;gap:10px;background:#061521}
+  .scard{width:auto;padding:17px;background:#071c2b;backdrop-filter:none}
+  .scard h3{font-size:19px}
+  .routegrid{grid-template-columns:1fr;gap:28px}
+  .photo-card{height:auto;aspect-ratio:16/10}
+  .photo-card img{min-height:0;height:100%;object-fit:cover}
+  .cities{margin-top:20px}
+  .city{padding:10px 8px;font-size:10px}
+  .parcelgrid{grid-template-columns:1fr;gap:28px}
+  .parcelphoto{height:auto;aspect-ratio:16/10}
+  .points{gap:10px}
+  .points span{font-size:11px}
+  .stepsgrid{grid-template-columns:1fr 1fr}
+  .step{padding:20px 15px}
+  .bookinggrid{grid-template-columns:1fr;gap:20px}
+  .bookingphoto{height:auto;aspect-ratio:16/10}
+  .bookingcopy{left:22px;right:22px;bottom:22px;top:auto;max-width:380px}
+  .bookingphoto .bookingcopy .section-title{font-size:clamp(34px,8vw,48px)!important;line-height:.94!important}
+  .form{padding:20px;gap:11px}
+  .reviews .reviewgrid{grid-template-columns:1fr 1fr}
+  .footer{align-items:flex-start}
+}
+@media (max-width: 620px){
+  .wrap{width:calc(100% - 24px)}
+  .nav{height:68px}
+  .brand{font-size:18px}
+  .brand .mark{width:28px;height:28px;border-radius:8px}
+  header .nav>.btn{font-size:10px;padding:10px 11px;border-radius:9px}
+  .mobile-menu-btn{width:40px;height:40px}
+  .hero-copy{padding:38px 0 4px}
+  .eyebrow{font-size:9px;letter-spacing:.14em}
+  .eyebrow i{width:22px;margin-right:7px}
+  .hero h1{font-size:43px;line-height:.94;letter-spacing:-.05em;margin:12px 0 16px}
+  .hero p{font-size:13px;line-height:1.55}
+  .hero-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:19px 0 22px}
+  .meta{min-width:0;gap:7px}
+  .metaicon{width:32px;height:32px;border-radius:8px}
+  .meta b{font-size:11px}.meta small{font-size:9px}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:8px}
+  .hero-actions .btn{width:100%;padding:13px 15px}
+  .hero-media{padding:9px 0 22px}
+  .hero-media img{aspect-ratio:4/3;border-radius:14px}
+  .section{padding:68px 0}
+  .section-title{font-size:40px;line-height:.96;margin:12px 0 16px}
+  .trustgrid{grid-template-columns:1fr 1fr}
+  .trustitem{min-height:106px;padding:13px 7px}
+  .trustitem .ti{width:38px;height:38px;margin-bottom:7px;border-radius:10px}
+  .trustitem strong{font-size:10px}
+  .trustitem>span:not(.ti){font-size:8.5px}
+  .trustitem:nth-child(5){grid-column:1/-1}
+  .fleet-head{margin-bottom:23px}
+  .fleet-head .section-title{font-size:38px}
+  .fleet-switch{margin-top:17px}
+  .fleet-switch button{padding:9px 11px;font-size:10px}
+  .fleet-intro{font-size:11px;line-height:1.55}
+  .fleet-cards{gap:12px}
+  .fleet-card{border-radius:15px}
+  .fleet-card-body{padding:15px}
+  .fleet-model{align-items:flex-start;flex-direction:column;gap:8px}
+  .fleet-model h3{font-size:25px}
+  .fleet-badge{font-size:8px;padding:6px 8px}
+  .fleet-specs{grid-template-columns:1fr;gap:7px;margin-top:13px}
+  .fleet-spec{padding:10px}
+  .fleet-spec b{font-size:10px}.fleet-spec small{font-size:8.5px}
+  .fleet-card .btnrow{display:grid;grid-template-columns:1fr 1fr;margin-top:12px}
+  .fleet-card .btn{font-size:10px;padding:11px 8px}
+  .schedulecards{grid-template-columns:1fr;padding:10px}
+  .road>img{height:170px}
+  .scard{padding:15px}
+  .scard .country{font-size:9px}.scard h3{font-size:18px;margin:7px 0}.scard p{font-size:9px}
+  .photo-card{aspect-ratio:4/3;border-radius:15px}
+  .cities{grid-template-columns:1fr 1fr;gap:0 7px}
+  .city{font-size:9px;padding:9px 5px}
+  .parcelphoto{aspect-ratio:4/3;border-radius:15px}
+  .parcel .section-title{font-size:38px}
+  .points{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .points span{font-size:10px}
+  .note{font-size:9px;line-height:1.45;padding:12px}
+  .stepsgrid{grid-template-columns:1fr;gap:8px;margin-top:24px}
+  .step{padding:17px 14px;border-radius:12px}
+  .step h3{font-size:14px;margin:10px 0 6px}.step p{font-size:10px;margin:0}
+  .bookinggrid{gap:14px}
+  .bookingphoto{aspect-ratio:4/3;border-radius:15px}
+  .bookingcopy{left:18px;right:18px;bottom:18px}
+  .bookingphoto .bookingcopy .section-title{font-size:35px!important;line-height:.95!important;margin:9px 0 11px!important}
+  .bookingphoto .bookingcopy .muted{font-size:11px!important;line-height:1.4!important;max-width:240px!important}
+  .form{grid-template-columns:1fr;padding:15px;border-radius:14px;gap:10px}
+  .full{grid-column:auto}
+  input,select,textarea{padding:12px;font-size:12px;border-radius:8px}
+  textarea{min-height:90px}
+  .form button{padding:13px 10px}
+  .reviews .reviewgrid{grid-template-columns:1fr}
+  .review{padding:17px}.review p{font-size:10px}
+  .footer{gap:18px}
+  .footer>div:nth-child(2){width:100%;padding:14px;border:1px solid var(--line);border-radius:11px;background:#061722}
+  .footerbuttons{display:grid;grid-template-columns:1fr 1fr;gap:7px;width:100%}
+  .footerbuttons .btn{width:100%;font-size:10px;padding:11px 7px}
+  .footerbuttons .btn:last-child{grid-column:1/-1}
+}
+@media (max-width:380px){
+  .brand{font-size:17px}.brand .mark{width:27px;height:27px}
+  header .nav>.btn{font-size:9px;padding:9px 9px}
+  .mobile-menu-btn{width:38px;height:38px}
+  .hero h1{font-size:39px}
+  .hero-meta{grid-template-columns:1fr}
+  .hero-media img{aspect-ratio:1/1}
+  .fleet-head .section-title,.section-title{font-size:35px}
+  .fleet-card .btnrow{grid-template-columns:1fr}
+  .schedulecards{padding:8px}
+}
+
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#"><span class="mark logo-mark"><img src="swedway-mark.png" alt="SwedWay" /></span>SwedWay</a><button class="mobile-menu-btn" type="button" aria-label="Відкрити меню" aria-expanded="false"><span></span><span></span><span></span></button><nav><a href="#">Головна</a><a href="#fleet">Про нас</a><a href="#route">Маршрут</a><a href="#services">Послуги</a><a href="#fleet">Автопарк</a><a href="#contacts">Контакти</a></nav><div class="navicons">
+  <div class="contact-menu">
+    <a class="circle contact-circle" href="tel:+380683939608" aria-label="Телефон" title="+380 68 393 96 08">
+      <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h3l1.4 4-2 1.6a14 14 0 0 0 5 5l1.6-2 4 1.4v3c0 1-2 2-3 2C10 19 5 14 5 7c0-2 1-3 2-3Z"/></svg></span>
+    </a>
+    <div class="contact-dropdown">
+      <div class="contact-number">+380 68 393 96 08</div>
+      <div class="contact-label">Зв'язатися з нами</div>
+      <div class="contact-links">
+        <a href="https://t.me/+380683939608" target="_blank" rel="noopener">Telegram</a>
+        <a href="viber://chat?number=%2B380683939608">Viber</a>
+        <a href="https://wa.me/380683939608" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div><a class="btn" href="#booking">Забронювати <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></div></header>
+<div class="mobile-menu" aria-hidden="true"><div class="mobile-menu-inner"><a href="#">Головна</a><a href="#fleet">Про нас</a><a href="#route">Маршрут</a><a href="#services">Послуги</a><a href="#fleet">Автопарк</a><a href="#contacts">Контакти</a><a class="mobile-book" href="#booking">Забронювати поїздку <span>→</span></a><div class="mobile-contact"><b>+380 68 393 96 08</b><div><a href="https://t.me/+380683939608" target="_blank" rel="noopener">Telegram</a><a href="viber://chat?number=%2B380683939608">Viber</a><a href="https://wa.me/380683939608" target="_blank" rel="noopener">WhatsApp</a></div></div></div></div>
+
+<main>
+<section class="hero"><div class="wrap hero-grid"><div class="hero-copy reveal"><div class="eyebrow"><i></i>Україна ↔ Швеція</div><h1>КОМФОРТНИЙ<br><span>ТРАНСФЕР</span></h1><p>Регулярні пасажирські перевезення між Україною та Швецією на комфортних Mercedes-Benz Sprinter.</p><div class="hero-meta"><div class="meta"><span class="metaicon"><span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M13 14h3M8 17h3"/></svg></span></span><span><b>Щосереди</b><small>виїзд з України</small></span></div><div class="meta"><span class="metaicon"><span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M13 14h3M8 17h3"/></svg></span></span><span><b>Щонеділі</b><small>виїзд зі Швеції</small></span></div></div><div class="hero-actions"><a class="btn" href="#booking">Забронювати поїздку <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a><a class="btn ghost" href="#route"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m10 9 5 3-5 3V9Z"/></svg></span>Дізнатися більше</a></div></div><div class="hero-media reveal"><img src="hero-new.png" alt="SwedWay Mercedes-Benz Sprinter"></div></div></section>
+
+<div class="wrap trust"><div class="trustgrid reveal"><div class="trustitem"><div class="ti"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M8 14h3M13 14h3M8 17h3"/></svg></span></div><strong>Регулярні рейси</strong><span>щотижня</span></div><div class="trustitem"><div class="ti"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15v-4l2-5h14l2 5v4"/><path d="M5 15h14M7 18h2M15 18h2"/><circle cx="7" cy="15" r="1.3"/><circle cx="17" cy="15" r="1.3"/></svg></span></div><strong>Сучасні</strong><span>Mercedes-Benz Sprinter</span></div><div class="trustitem"><div class="ti"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></span></div><strong>Від адреси</strong><span>до адреси</span></div><div class="trustitem"><div class="ti"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="8" width="14" height="12" rx="2"/><path d="M8 8V5h8v3M8 12h8M8 16h5"/></svg></span></div><strong>Допомога</strong><span>з багажем</span></div><div class="trustitem"><div class="ti"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 3v5c0 4.8-3.1 8.2-8 10-4.9-1.8-8-5.2-8-10V6l8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span></div><strong>Надійно</strong><span>та безпечно</span></div></div></div>
+
+<section class="section fleet" id="fleet"><div class="wrap"><div class="fleet-head reveal"><div class="fleet-head-copy"><div class="eyebrow"><i></i>Наш автопарк</div><h2 class="section-title">MERCEDES-BENZ <span style="color:#1593ff">SPRINTER</span></h2><p class="muted">Надійність. Комфорт. Безпека.</p><div class="fleet-switch"><button class="active">W906 (2016)</button><button>W907 (2020)</button></div></div><div class="fleet-intro">Сучасні мікроавтобуси для комфортних подорожей між Україною та Швецією.</div></div><div class="fleet-cards"><article class="fleet-card reveal"><div class="fleet-photo"><img src="w906-2016.png" alt="Mercedes-Benz Sprinter W906 2016 SwedWay"></div><div class="fleet-card-body"><div class="fleet-model"><h3>W906 <span>(2016)</span></h3><div class="fleet-badge">Надійна класика</div></div><div class="fleet-specs"><div class="fleet-spec"><b>Комфортний салон</b><small>для тривалих поїздок</small></div><div class="fleet-spec"><b>Надійний транспорт</b><small>для регулярних рейсів</small></div><div class="fleet-spec"><b>Зручний багаж</b><small>допомога під час посадки</small></div></div><div class="btnrow"><a class="btn ghost" href="#booking">Детальніше <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a><a class="btn" href="#booking">Забронювати <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></div></div></article><article class="fleet-card reveal"><div class="fleet-photo"><img src="w907-2020.png" alt="Mercedes-Benz Sprinter W907 2020 SwedWay"></div><div class="fleet-card-body"><div class="fleet-model"><h3>W907 <span>(2020)</span></h3><div class="fleet-badge">Сучасний комфорт</div></div><div class="fleet-specs"><div class="fleet-spec"><b>Сучасний салон</b><small>комфорт у дорозі</small></div><div class="fleet-spec"><b>Підвищений рівень безпеки</b><small>для регулярних рейсів</small></div><div class="fleet-spec"><b>Зручний багаж</b><small>для ваших речей</small></div></div><div class="btnrow"><a class="btn ghost" href="#booking">Детальніше <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a><a class="btn" href="#booking">Забронювати <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></div></div></article></div></div></section>
+
+<section class="section schedule"><div class="wrap"><div class="eyebrow reveal"><i></i>Розклад рейсів</div><h2 class="section-title reveal">Щотижня.<br>За графіком.</h2><div class="road reveal"><img src="road-schedule.png" alt="Дорога та поїздка SwedWay"><div class="schedulecards"><article class="scard"><div class="country">🇺🇦 УКРАЇНА → 🇸🇪 ШВЕЦІЯ</div><h3>Щосереди <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></h3><p>Виїзд з України</p></article><article class="scard"><div class="country">🇸🇪 ШВЕЦІЯ → 🇺🇦 УКРАЇНА</div><h3>Щонеділі <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></h3><p>Виїзд зі Швеції</p></article></div></div></div></section>
+
+<section class="section" id="route"><div class="wrap routegrid"><div class="photo-card reveal"><img src="route.webp" alt="Маршрут Україна — Швеція"></div><div class="reveal"><div class="eyebrow"><i></i>Наш маршрут</div><h2 class="section-title">Тернопіль<br>↔ Швеція</h2><p class="muted">Продуманий маршрут для вашої зручності. Забираємо та доставляємо до узгодженої адреси.</p><div class="cities"><div class="city"><b>UA</b>Тернопіль</div><div class="city"><b>SE</b>Карлскруна</div><div class="city"><b>UA</b>Львів</div><div class="city"><b>SE</b>Карлсгамн</div><div class="city"><b>PL</b>Люблін</div><div class="city"><b>SE</b>Крістіанстад</div><div class="city"><b>PL</b>Варшава</div><div class="city"><b>SE</b>Кальмар</div><div class="city"><b>PL</b>Плонськ</div><div class="city"><b>SE</b>Векше</div><div class="city"><b>PL</b>Млава</div><div class="city"><b>SE</b>Єнчепінг</div><div class="city"><b>PL</b>Оструда</div><div class="city"><b>SE</b>Лінчепінг</div><div class="city"><b>PL</b>Гдиня</div><div class="city"><b>SE</b>Норрчепінг</div><div class="city"><b>SE</b>Ничепінг</div><div class="city"><b>SE</b>Еребру</div><div class="city"><b>SE</b>Вестерос</div><div class="city"><b>SE</b>Стокгольм</div><div class="city"><b>SE</b>Уппсала</div><div class="city"><b>SE</b>Уппландс-Весбю</div><div class="city"><b>SE</b>Норртельє</div></div></div></div></section>
+
+<section class="section parcel" id="services"><div class="wrap parcelgrid"><div class="parcelphoto reveal"><img src="parcel-meat-delivery-4k.png" alt="Посилки SwedWay"></div><div class="reveal"><div class="eyebrow"><i></i>Посилки та передачі</div><h2 class="section-title">ВАЖЛИВЕ<br>ЇДЕ РАЗОМ</h2><p class="muted">Доставляємо посилки та передачі між Україною та Швецією.</p><div class="points"><span><span class="icon"><svg viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 8-12h-6l1-8Z"/></svg></span>Швидко</span><span><span class="icon"><svg viewBox="0 0 24 24"><path d="m4 13 5 5L20 7"/></svg></span>Акуратно</span><span><span class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5"/></svg></span>З контролем доставки</span></div><div class="note">Передачі з продуктами — уточнюйте можливість перевезення та актуальні правила перед відправленням.</div></div></div></section>
+
+<section class="section steps"><div class="wrap"><div class="eyebrow reveal"><i></i>Як це працює?</div><h2 class="section-title reveal">Чотири кроки<br>до заявки.</h2><div class="stepsgrid"><div class="step reveal"><div class="num">01</div><h3>Заповнюєте форму</h3><p>Обираєте напрямок, дату, кількість пасажирів та залишаєте контакти.</p></div><div class="step reveal"><div class="num">02</div><h3>Перевіряєте дані</h3><p>Перед відправленням бачите всі деталі своєї заявки.</p></div><div class="step reveal"><div class="num">03</div><h3>Відкривається Telegram</h3><p>Після натискання кнопки відкривається чат із уже готовим повідомленням.</p></div><div class="step reveal"><div class="num">04</div><h3>Надсилаєте заявку</h3><p>Залишається лише натиснути «Надіслати» - і заявка потрапляє в Telegram.</p></div></div></div></section>
+
+<section class="section booking" id="booking"><div class="wrap bookinggrid"><div class="bookingphoto reveal"><img src="booking-travel-4k.png" alt="Бронювання поїздки SwedWay"><div class="bookingcopy"><div class="eyebrow"><i></i>Бронювання</div><h2 class="section-title">ЗАБРОНЮВАТИ<br>ПОЇЗДКУ</h2><p class="muted">Подорож починається з одного повідомлення.</p></div></div><form class="form reveal"><div><label>Звідки<select name="from" required><option>Оберіть місто</option><option>Тернопіль</option><option>Львів</option><option>Люблін</option><option>Варшава</option><option>Стокгольм</option><option>Уппсала</option></select></label></div><div><label>Куди<select name="to" required><option>Оберіть місто</option><option>Стокгольм</option><option>Уппсала</option><option>Норртельє</option><option>Тернопіль</option><option>Львів</option></select></label></div><div><label>Дата<input name="date" type="date" required></label></div><div><label>Кількість пасажирів<select name="passengers"><option>1</option><option>2</option><option>3</option><option>4+</option></select></label></div><div><label>Ваше ім'я<input name="name" required placeholder="Введіть ім'я"></label></div><div><label>Телефон<input name="phone" required placeholder="+46 ..."></label></div><div class="full"><label>Коментар<textarea name="comment" placeholder="Додати коментар"></textarea></label></div><button class="btn full" type="submit">Залишити заявку →</button></form></div></section>
+
+<section class="section reviews"><div class="wrap"><div class="eyebrow reveal"><i></i>Відгуки</div><h2 class="section-title reveal">Досвід пасажирів.</h2><div class="reviewgrid"><div class="review reveal"><b>Олена</b><div class="stars">★★★★★</div><p>Зручна поїздка та зрозуміла комунікація. Дякую за сервіс!</p></div><div class="review reveal"><b>Андрій</b><div class="stars">★★★★★</div><p>Регулярний маршрут і попереднє узгодження деталей поїздки.</p></div><div class="review reveal"><b>Марина</b><div class="stars">★★★★★</div><p>Посилку прийняли та доставили за узгодженими умовами.</p></div></div></div></section>
+</main>
+<footer id="contacts"><div class="wrap footer"><div><a class="brand" href="#"><span class="mark logo-mark"><img src="swedway-mark.png" alt="SwedWay" /></span>SwedWay</a><small>Більше, ніж просто поїздка</small></div><div><b>ГОТОВІ ДО ДОРОГИ?</b><small>Україна ↔ Швеція щотижня</small></div><div class="footerbuttons"><a class="btn ghost" href="tel:+46000000000"><span class="icon"><svg viewBox="0 0 24 24"><path d="M7 4h3l1.4 4-2 1.6a14 14 0 0 0 5 5l1.6-2 4 1.4v3c0 1-1 2-3 2C10 19 5 14 5 7c0-2 1-3 2-3Z"/></svg></span>Зателефонувати</a><a class="btn ghost" href="#"><span class="icon"><svg viewBox="0 0 24 24"><path d="m21 4-3.1 16-5.9-4.6-3.3 3.1.4-5.1L18 7l-9.2 5.5-5.8-1.9L21 4Z"/></svg></span>Telegram</a><a class="btn yellow" href="#booking">Забронювати</a></div></div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+const SWEDWAY_TELEGRAM_USERNAME='telebotforge_agency';
+function openSwedWayTelegram(e){
+  e.preventDefault();
+  const f=e.currentTarget;
+  if(!f.checkValidity()){f.reportValidity();return;}
+
+  const get=(name)=>f.elements[name]?.value?.trim()||'—';
+  const from=get('from');
+  const to=get('to');
+  const dateRaw=get('date');
+  const date=dateRaw ? dateRaw.split('-').reverse().join('.') : '—';
+  const passengers=get('passengers');
+  const name=get('name');
+  const phone=get('phone');
+  const comment=get('comment');
+
+  const message =
+    `🚐 Нова заявка на поїздку SwedWay\n\n` +
+    `📍 Звідки: ${from}\n` +
+    `📍 Куди: ${to}\n` +
+    `📅 Дата: ${date}\n` +
+    `👥 Пасажири: ${passengers}\n` +
+    `👤 Ім'я: ${name}\n` +
+    `📞 Телефон: ${phone}\n` +
+    `💬 Коментар: ${comment}`;
+
+  const url=`https://t.me/${SWEDWAY_TELEGRAM_USERNAME}?text=${encodeURIComponent(message)}`;
+  window.location.href=url;
+}
+document.querySelector('.form').addEventListener('submit',openSwedWayTelegram);
+const menuBtn=document.querySelector('.mobile-menu-btn');
+const mobileMenu=document.querySelector('.mobile-menu');
+if(menuBtn&&mobileMenu){
+  menuBtn.addEventListener('click',()=>{
+    const open=menuBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('open',open);
+    mobileMenu.setAttribute('aria-hidden',String(!open));
+    menuBtn.setAttribute('aria-expanded',String(open));
+    document.body.style.overflow=open?'hidden':'';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    menuBtn.classList.remove('active'); mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden','true'); menuBtn.setAttribute('aria-expanded','false'); document.body.style.overflow='';
+  }));
+}
+</script>
+</body></html>
